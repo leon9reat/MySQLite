@@ -1,2 +1,3 @@
+include ':MySQLiteKotlin'
 include ':app'
 rootProject.name = "MySQLite"
