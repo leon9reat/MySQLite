@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginbottom="8dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margintop="200dp"
+            android:layout_height="120dp"
+            android:id="@+id/card_satu"
+            android:layout_below="@id/view_pager">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="152dp"
+                    android:layout_height="116dp"
+                    android:layout_margintop="0dp"
+                    android:scaletype="fitCenter"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginleft="150dp"
+                    android:layout_margintop="0dp"
+                    android:layout_marginbottom="100dp"
+                    android:fontfamily="sans-serif-black"
+                    android:text="Welcom"
+                    android:textcolor="@color/design_dark_default_color_on_primary"
+                    android:textsize="24sp"
+                    android:textstyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Donate"
+                    android:layout_marginleft="150dp"
+                    android:layout_margintop="40dp"
+                    android:fontfamily="sans-serif-black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Donate Dua"
+                    android:layout_marginleft="150dp"
+                    android:layout_margintop="60dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/card_dua"
+            android:layout_margintop="330dp"
+            android:layout_below="@id/card_satu">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_add_24"
+                    android:scaletype="fitCenter" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginleft="75dp"
+                    android:scaletype="centerInside" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginleft="150dp"
+                    android:textstyle="bold"
+                    android:fontfamily="sans-serif-black"
+                    android:textsize="24sp"
+                    android:textcolor="@color/design_dark_default_color_on_primary"
+                    android:text="Story" />
+
+                <Button
+                    android:id="@+id/btnstory"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:layout_marginleft="150dp"
+                    android:layout_margintop="60dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Ceritaku"
+                    android:textsize="18sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:id="@+id/card_tiga"
+            android:layout_below="@id/card_dua"
+            android:layout_margintop="440dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_add_24" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Donasi"
+                    android:layout_marginleft="150dp"
+                    android:fontfamily="sans-serif-black"
+                    android:textcolor="@color/design_dark_default_color_on_primary"
+                    android:textstyle="bold"
+                    android:textsize="24sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginleft="150dp"
+                    android:layout_margintop="30dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/surplus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Makanan Satu" />
+
+                    <RadioButton
+                        android:id="@+id/donatur"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Makanan Dua" />
+
+                    <RadioButton
+                        android:id="@+id/volunteer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Makanan Tiga" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/card_empat"
+            android:layout_below="@id/card_tiga"
+            android:layout_margintop="570dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Kontak"
+                    android:textsize="24sp"
+                    android:fontfamily="sans-serif-black"
+                    android:textstyle="bold"
+                    android:textcolor="@color/design_dark_default_color_on_primary" />
+
+                <ImageView
+                    android:layout_margintop="30dp"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_add_24" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="foodfund@funding.com"
+                    android:layout_margintop="40dp"
+                    android:layout_marginleft="40dp" />
+
+                <ImageView
+                    android:layout_margintop="30dp"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginleft="200dp"
+                    android:src="@drawable/ic_baseline_add_24" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="0822-3453-2244"
+                    android:layout_margintop="40dp"
+                    android:layout_marginleft="250dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</ScrollView>
