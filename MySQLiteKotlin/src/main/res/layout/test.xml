@@ -12,13 +12,11 @@
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
             android:layout_height="190dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginbottom="8dp" />
+            android:layout_alignParentTop="true" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_margintop="200dp"
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
             android:id="@+id/card_satu"
             android:layout_below="@id/view_pager">
 
@@ -31,46 +29,42 @@
                 <ImageView
                     android:layout_width="152dp"
                     android:layout_height="116dp"
-                    android:layout_margintop="0dp"
-                    android:scaletype="fitCenter"
+                    android:layout_marginTop="0dp"
+                    android:scaleType="fitCenter"
                     tools:srcCompat="@tools:sample/backgrounds/scenic"
                     android:contentDescription="TODO" />
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginleft="150dp"
-                    android:layout_margintop="0dp"
-                    android:layout_marginbottom="100dp"
-                    android:fontfamily="sans-serif-black"
-                    android:text="Welcom"
-                    android:textcolor="@color/design_dark_default_color_on_primary"
-                    android:textsize="24sp"
-                    android:textstyle="bold" />
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Welcome"
+                    android:textColor="@color/design_dark_default_color_on_primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Donate"
-                    android:layout_marginleft="150dp"
-                    android:layout_margintop="40dp"
-                    android:fontfamily="sans-serif-black" />
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="sans-serif-black" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Donate Dua"
-                    android:layout_marginleft="150dp"
-                    android:layout_margintop="60dp" />
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="60dp" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:id="@+id/card_dua"
-            android:layout_margintop="330dp"
             android:layout_below="@id/card_satu">
 
             <LinearLayout
@@ -82,43 +76,43 @@
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/ic_baseline_add_24"
-                    android:scaletype="fitCenter" />
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="match_parent"
-                    android:layout_marginleft="75dp"
-                    android:scaletype="centerInside" />
+                    android:layout_marginStart="75dp"
+                    android:scaleType="centerInside" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginleft="150dp"
-                    android:textstyle="bold"
-                    android:fontfamily="sans-serif-black"
-                    android:textsize="24sp"
-                    android:textcolor="@color/design_dark_default_color_on_primary"
+                    android:layout_marginStart="150dp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="24sp"
+                    android:textColor="@color/design_dark_default_color_on_primary"
                     android:text="Story" />
 
                 <Button
                     android:id="@+id/btnstory"
                     android:layout_width="130dp"
                     android:layout_height="30dp"
-                    android:layout_marginleft="150dp"
-                    android:layout_margintop="60dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="60dp"
                     android:background="@color/colorPrimary"
                     android:text="Ceritaku"
-                    android:textsize="18sp" />
+                    android:textSize="18sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
             android:id="@+id/card_tiga"
-            android:layout_below="@id/card_dua"
-            android:layout_margintop="440dp">
+            android:layout_below="@id/card_dua">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -129,23 +123,24 @@
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ic_baseline_add_24" />
+                    android:src="@drawable/ic_baseline_add_24"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Donasi"
-                    android:layout_marginleft="150dp"
-                    android:fontfamily="sans-serif-black"
-                    android:textcolor="@color/design_dark_default_color_on_primary"
-                    android:textstyle="bold"
-                    android:textsize="24sp" />
+                    android:layout_marginStart="150dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/design_dark_default_color_on_primary"
+                    android:textStyle="bold"
+                    android:textSize="24sp" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginleft="150dp"
-                    android:layout_margintop="30dp"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="30dp"
                     android:orientation="vertical">
 
                     <RadioButton
@@ -173,8 +168,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:id="@+id/card_empat"
-            android:layout_below="@id/card_tiga"
-            android:layout_margintop="570dp">
+            android:layout_below="@id/card_tiga">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -186,37 +180,38 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Kontak"
-                    android:textsize="24sp"
-                    android:fontfamily="sans-serif-black"
-                    android:textstyle="bold"
-                    android:textcolor="@color/design_dark_default_color_on_primary" />
+                    android:textSize="24sp"
+                    android:fontFamily="sans-serif-black"
+                    android:textStyle="bold"
+                    android:textColor="@color/design_dark_default_color_on_primary" />
 
                 <ImageView
-                    android:layout_margintop="30dp"
                     android:layout_width="30dp"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ic_baseline_add_24" />
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/ic_baseline_add_24"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="foodfund@funding.com"
-                    android:layout_margintop="40dp"
-                    android:layout_marginleft="40dp" />
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="40dp" />
 
                 <ImageView
-                    android:layout_margintop="30dp"
+                    android:layout_marginTop="30dp"
                     android:layout_width="30dp"
                     android:layout_height="match_parent"
-                    android:layout_marginleft="200dp"
+                    android:layout_marginStart="200dp"
                     android:src="@drawable/ic_baseline_add_24" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="0822-3453-2244"
-                    android:layout_margintop="40dp"
-                    android:layout_marginleft="250dp" />
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="250dp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>

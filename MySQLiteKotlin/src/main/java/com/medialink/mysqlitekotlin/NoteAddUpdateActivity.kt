@@ -3,8 +3,11 @@ package com.medialink.mysqlitekotlin
 import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.medialink.mysqlitekotlin.db.DatabaseContract
 import com.medialink.mysqlitekotlin.db.NoteHelper
@@ -130,5 +133,65 @@ class NoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
         val dateFormat = SimpleDateFormat("yyyy/MM/dd HH:mm:ss", Locale.getDefault())
         val date = Date()
         return dateFormat.format(date)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        if (isEdit) {
+            menuInflater.inflate(R.menu.menu_form, menu)
+        }
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_delete -> showAlertDialog(ALERT_DIALOG_DELETE)
+            android.R.id.home -> showAlertDialog(ALERT_DIALOG_CLOSE)
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onBackPressed() {
+        showAlertDialog(ALERT_DIALOG_CLOSE)
+    }
+
+    private fun showAlertDialog(type: Int) {
+        val isDialogClose = type == ALERT_DIALOG_CLOSE
+        val dialogTitle: String
+        val dialogMsg: String
+
+        if (isDialogClose) {
+            dialogTitle = "Batal"
+            dialogMsg = "Apakah anda ingin membatalkan perubahan pada form?"
+        } else {
+            dialogTitle = "Hapus Note"
+            dialogMsg = "Apakah anda yakin ingin menghapus item ini?"
+        }
+
+        val dialogAlertBuilder = AlertDialog.Builder(this)
+        dialogAlertBuilder
+                .setMessage(dialogMsg)
+                .setCancelable(true)
+                .setPositiveButton("Ya") { dialog, id ->
+                    if (isDialogClose) {
+                        finish()
+                    } else {
+                        val result = noteHelper.deleteById(note?.id.toString()).toLong()
+                        if (result > 0) {
+                            val intent = Intent()
+                            intent.putExtra(EXTRA_POSITION, position)
+                            setResult(RESULT_DELETE, intent)
+                            finish()
+                        } else {
+                            Toast.makeText(this, "Gagal menghapus data.",
+                                    Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
+                .setNegativeButton("Tidak") {dialogInterface, i ->
+                    dialogInterface.cancel()
+                }
+        val alertDialog = dialogAlertBuilder.create()
+        alertDialog.show()
+
     }
 }
